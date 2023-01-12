@@ -1,0 +1,23 @@
+<div>
+  characters
+</div>
+
+<hr class="separator waiting" [ngClass]="{'waiting': !data.results && !hasError}">
+
+<div id="dataResults" *ngIf="data.results">
+  <div
+    class="link"
+    *ngFor="let character of data.results"
+    (click)="loadCharacter(character.uid)">
+    {{ character.name }}
+  </div>
+  <div class="buttons">
+    <a id="previousPage" *ngIf="data.previous" (click)="previousPage()" class="link"> < </a>
+    <span *ngIf="!data.previous"> </span>
+    <span id="pageCounter">{{ currentPage }} of {{ data.total_pages }}</span>
+    <a id="nextPage" *ngIf="data.next" (click)="nextPage()" class="link"> > </a>
+    <span *ngIf="!data.next"> </span>
+  </div>
+</div>
+
+<div id="noData" *ngIf="hasError">No data</div>

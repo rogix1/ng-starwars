@@ -1,0 +1,7 @@
+<div class="breadcrumb">
+  <span *ngFor="let item of items; let last = last;" routerLink='{{item.link}}' >
+    <span [ngClass]="{'link item': !last }">{{item.label}}</span>
+    <span *ngIf="!last"> > </span>
+  </span>
+</div>
+

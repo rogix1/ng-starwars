@@ -1,0 +1,18 @@
+<app-breadcrumb [items]="breadcrumbItems"></app-breadcrumb>
+
+<hr class="separator waiting" [ngClass]="{'waiting': !characterDescription && !planetDescription?.name && !hasError}">
+
+<ng-container *ngIf="characterDescription">
+  <div class="label-value-row"><div>Name</div><div>{{characterDescription.name}}</div></div>
+  <div class="label-value-row"><div>Height</div><div>{{characterDescription.height}}</div></div>
+  <div class="label-value-row"><div>Mass</div><div>{{characterDescription.mass}}</div></div>
+  <div class="label-value-row"><div>Hair color</div><div>{{characterDescription.hair_color}}</div></div>
+  <div class="label-value-row"><div>Skin color</div><div>{{characterDescription.skin_color}}</div></div>
+  <div class="label-value-row"><div>Eye color</div><div>{{characterDescription.eye_color}}</div></div>
+  <div class="label-value-row"><div>Birth year</div><div>{{characterDescription.birth_year}}</div></div>
+  <div class="label-value-row"><div>Gender</div><div>{{characterDescription.gender}}</div></div>
+  <div class="label-value-row"><div>Planet</div><div><a class="link" (click)="showPlanet()">{{planetDescription?.name}}</a></div></div>
+</ng-container>
+
+<div *ngIf="hasError">No data</div>
+

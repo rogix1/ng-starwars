@@ -1,0 +1,19 @@
+<app-breadcrumb [items]="breadcrumbItems"></app-breadcrumb>
+
+<hr class="separator waiting" [ngClass]="{'waiting': !planetDescription && !hasError}">
+
+<ng-container *ngIf="planetDescription">
+  <div class="label-value-row"><div>Name</div><div>{{planetDescription.name}}</div></div>
+  <div class="label-value-row"><div>Diameter</div><div>{{planetDescription.diameter}}</div></div>
+  <div class="label-value-row"><div>Rotation period</div><div>{{planetDescription.rotation_period}}</div></div>
+  <div class="label-value-row"><div>Orbital period</div><div>{{planetDescription.orbital_period}}</div></div>
+  <div class="label-value-row"><div>Gravity</div><div>{{planetDescription.gravity}}</div></div>
+  <div class="label-value-row"><div>Population</div><div>{{planetDescription.population}}</div></div>
+  <div class="label-value-row"><div>Climate</div><div>{{planetDescription.climate}}</div></div>
+  <div class="label-value-row"><div>Terrain</div><div>{{planetDescription.terrain}}</div></div>
+  <div class="label-value-row"><div>Surface water</div><div>{{planetDescription.surface_water}}</div></div>
+</ng-container>
+
+<div *ngIf="hasError">No data</div>
+
+

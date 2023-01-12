@@ -1,0 +1,98 @@
+$mobile-width: 480px
+$tablet-width: 768px
+$notebook-width: 1024px
+
+body
+  background-image: url("/assets/deathstar.jpg")
+  background-position: center center
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-size: cover
+  background-color: black
+
+  color: greenyellow
+  font-size: xx-large
+  font-family: "Verdana"
+
+.separator
+  height: 2px
+  border-width: 0
+  background-color: greenyellow
+
+.waiting
+  animation: pulse-max 1s infinite
+  opacity: 1.0
+
+.link
+  cursor: pointer
+  animation: pulse 3s infinite
+  opacity: 1.0
+  &:hover
+    background-color: #003300
+
+@keyframes pulse
+  0%
+    opacity: 0.5
+  50%
+    opacity: 1.0
+  100%
+    opacity: 0.5
+
+@keyframes pulse-max
+  0%
+    opacity: 0.1
+  50%
+    opacity: 1.0
+  100%
+    opacity: 0.1
+
+.label-value-row
+  display: flex
+  justify-content: space-between
+
+@media (min-width: 1025px)
+  .main
+    width: 600px
+    margin-left: 10vw
+    margin-top: 15vh
+    font-size: xx-large
+    .separator
+      width: 600px
+
+@media (max-width: 1024px)
+  .main
+    width: 50vw
+    margin-left: 10vw
+    margin-right: 10vw
+    margin-top: 10vh
+    font-size: x-large
+    .separator
+      width: 50vw
+
+@media (max-width: 768px)
+  .main
+    width: 70vw
+    margin-left: 15vw
+    margin-right: 15vw
+    margin-top: 5vh
+    font-size: large
+    .separator
+      width: 70vw
+
+@media (max-width: 480px)
+  .main
+    width: 80vw
+    margin-left: 10vw
+    margin-top: 5vh
+    font-size: medium
+    .separator
+      width: 80vw
+
+
+
+
+
+
+
+
+
